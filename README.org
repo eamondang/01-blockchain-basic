@@ -4,6 +4,35 @@
 #+SETUPFILE: ~/theme-readtheorg.setup
 #+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
 
+* Table of Contents :toc:
+- [[#program-state][Program State]]
+- [[#overview-networks][Overview Networks]]
+- [[#dapp-architecture][DApp Architecture]]
+- [[#byzantine-generals-problem][Byzantine General's Problem]]
+  - [[#image-01][Image 01]]
+  - [[#image-02][Image 02]]
+  - [[#practical-byzantine-fault-tolerance][Practical Byzantine Fault Tolerance]]
+- [[#transaction-flow][Transaction flow]]
+- [[#consensus][Consensus]]
+  - [[#proof-of-work][Proof of Work]]
+  - [[#proof-of-stake][Proof of Stake]]
+- [[#requirements-of-blockchain][Requirements of Blockchain?]]
+- [[#types-of-blockchain][Types of Blockchain]]
+- [[#what-is-blockchain][What is Blockchain]]
+- [[#components-of-blockchain][Components of Blockchain]]
+  - [[#data-models][Data Models]]
+  - [[#decentralized-models][Decentralized Models]]
+  - [[#network-models][Network Models]]
+  - [[#consensus-1][=Consensus=]]
+  - [[#cryptographic-schemes][Cryptographic schemes]]
+- [[#decentralized-features][Decentralized Features]]
+  - [[#level-of-decentralization][Level of Decentralization]]
+  - [[#security][Security]]
+  - [[#performance][Performance]]
+- [[#example][Example]]
+  - [[#install][Install]]
+- [[#cons][Cons]]
+
 * Program State
 [[./images/program-state.png]]
 * Overview Networks

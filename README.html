@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-06-10 Sat 19:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blockchain Basic</title>
+<meta name="author" content="Dang Quang Vu" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<style>pre.src{background:#343131;color:white;} </style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Blockchain Basic</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1290f6a">1. Program State</a></li>
+<li><a href="#org79ef8f9">2. Overview Networks</a></li>
+<li><a href="#orga35fae9">3. DApp Architecture</a></li>
+<li><a href="#org243fb74">4. Byzantine General's Problem</a>
+<ul>
+<li><a href="#org1d16ce4">4.1. Image 01</a></li>
+<li><a href="#org885f1d0">4.2. Image 02</a></li>
+<li><a href="#orgad5f645">4.3. Practical Byzantine Fault Tolerance</a></li>
+</ul>
+</li>
+<li><a href="#org949e06c">5. Transaction flow</a></li>
+<li><a href="#orgfa1cdb0">6. Consensus</a>
+<ul>
+<li><a href="#orgeb04c3e">6.1. Proof of Work</a></li>
+<li><a href="#orgb7e2d86">6.2. Proof of Stake</a></li>
+</ul>
+</li>
+<li><a href="#org00bf330">7. Requirements of Blockchain?</a></li>
+<li><a href="#org3cb44e2">8. Types of Blockchain</a></li>
+<li><a href="#orgd1932c4">9. What is Blockchain</a></li>
+<li><a href="#orgf9176bd">10. Components of Blockchain</a>
+<ul>
+<li><a href="#org09195de">10.1. Data Models</a></li>
+<li><a href="#org3297e84">10.2. Decentralized Models</a></li>
+<li><a href="#orgc629b2a">10.3. Network Models</a></li>
+<li><a href="#org4312fc1">10.4. <code>Consensus</code></a></li>
+<li><a href="#org77836d8">10.5. Cryptographic schemes</a></li>
+</ul>
+</li>
+<li><a href="#orgcfe6e89">11. Decentralized Features</a>
+<ul>
+<li><a href="#org7c2a795">11.1. Level of Decentralization</a></li>
+<li><a href="#orga71e2ff">11.2. Security</a></li>
+<li><a href="#org2fa6c43">11.3. Performance</a></li>
+</ul>
+</li>
+<li><a href="#orgdfcc481">12. Example</a>
+<ul>
+<li><a href="#org636bd15">12.1. Install</a></li>
+</ul>
+</li>
+<li><a href="#orgc6c5dd9">13. Cons</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1290f6a" class="outline-2">
+<h2 id="org1290f6a"><span class="section-number-2">1.</span> Program State</h2>
+<div class="outline-text-2" id="text-1">
+
+<div id="orgffd8b92" class="figure">
+<p><img src="./images/program-state.png" alt="program-state.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org79ef8f9" class="outline-2">
+<h2 id="org79ef8f9"><span class="section-number-2">2.</span> Overview Networks</h2>
+<div class="outline-text-2" id="text-2">
+
+<div id="orgfc83ea0" class="figure">
+<p><img src="./images/networks.png" alt="networks.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li><a href="https://www.geeksforgeeks.org/comparison-centralized-decentralized-and-distributed-systems/">Comparison Centralized &amp; Decentralized &amp; Distributed Networks</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga35fae9" class="outline-2">
+<h2 id="orga35fae9"><span class="section-number-2">3.</span> DApp Architecture</h2>
+<div class="outline-text-2" id="text-3">
+
+<div id="org21df338" class="figure">
+<p><img src="./images/blockchain-step.png" alt="blockchain-step.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org243fb74" class="outline-2">
+<h2 id="org243fb74"><span class="section-number-2">4.</span> <a href="https://www.youtube.com/watch?v=dfsRQyYXOsQ">Byzantine General's Problem</a></h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org1d16ce4" class="outline-3">
+<h3 id="org1d16ce4"><span class="section-number-3">4.1.</span> Image 01</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div id="org395f42a" class="figure">
+<p><img src="./images/bft-0.png" alt="bft-0.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org885f1d0" class="outline-3">
+<h3 id="org885f1d0"><span class="section-number-3">4.2.</span> Image 02</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div id="orgcb493d3" class="figure">
+<p><img src="./images/bft-1.png" alt="bft-1.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad5f645" class="outline-3">
+<h3 id="orgad5f645"><span class="section-number-3">4.3.</span> Practical Byzantine Fault Tolerance</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div id="org3a3bbfa" class="figure">
+<p><img src="./images/pbft-1.png" alt="pbft-1.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org949e06c" class="outline-2">
+<h2 id="org949e06c"><span class="section-number-2">5.</span> Transaction flow</h2>
+<div class="outline-text-2" id="text-5">
+
+<div id="org5edd9d0" class="figure">
+<p><img src="./images/transaction.png" alt="transaction.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa1cdb0" class="outline-2">
+<h2 id="orgfa1cdb0"><span class="section-number-2">6.</span> <a href="https://www.youtube.com/watch?v=3AJ3lcm15cY">Consensus</a></h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgeb04c3e" class="outline-3">
+<h3 id="orgeb04c3e"><span class="section-number-3">6.1.</span> Proof of Work</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<div id="org5e1cd11" class="figure">
+<p><img src="./images/pow.png" alt="pow.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb7e2d86" class="outline-3">
+<h3 id="orgb7e2d86"><span class="section-number-3">6.2.</span> Proof of Stake</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<div id="org94efc7a" class="figure">
+<p><img src="./images/pos.png" alt="pos.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org00bf330" class="outline-2">
+<h2 id="org00bf330"><span class="section-number-2">7.</span> Requirements of Blockchain?</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>High Availability</li>
+<li>Sustainability</li>
+<li>Irreversibility</li>
+<li>Transparency</li>
+<li>Append-only</li>
+<li><code>Consensus</code></li>
+<li>Security</li>
+<li>Global</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3cb44e2" class="outline-2">
+<h2 id="org3cb44e2"><span class="section-number-2">8.</span> Types of Blockchain</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Permissionless Blockchain - Public Blockchain
+<ul class="org-ul">
+<li>Anyone can access to write the data</li>
+<li>Anyone can read</li>
+<li>Ex: 99%</li>
+</ul></li>
+<li>Permissioned Blockchain - Private Blockchain
+<ul class="org-ul">
+<li>Participants need permission to accessing the data</li>
+<li>Readers need permission to read</li>
+<li>Ex: <a href="https://www.hyperledger.org/use/fabric">Hyperledger Fabric</a>, <a href="https://r3.com/">Corda</a></li>
+</ul></li>
+<li>Consortium Blockchain
+<ul class="org-ul">
+<li>Participants need permission to accessing the data</li>
+<li>Anyone can read</li>
+<li>Ex: <a href="https://ripple.com/">Ripple</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd1932c4" class="outline-2">
+<h2 id="orgd1932c4"><span class="section-number-2">9.</span> What is Blockchain</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>It can be thought of as <code>ONE BIG COMPUTER</code> made up of small computers around the world.</li>
+<li>All these computers (nodes) are connected to one another and have a full copy of the code and data.</li>
+<li>One of the best ways to understand blockchain is by comparing it with a <code>traditional client/server architecture</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf9176bd" class="outline-2">
+<h2 id="orgf9176bd"><span class="section-number-2">10.</span> Components of Blockchain</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org09195de" class="outline-3">
+<h3 id="org09195de"><span class="section-number-3">10.1.</span> Data Models</h3>
+<div class="outline-text-3" id="text-10-1">
+<ul class="org-ul">
+<li>State Models</li>
+<li>Account Models</li>
+<li>Object Models</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3297e84" class="outline-3">
+<h3 id="org3297e84"><span class="section-number-3">10.2.</span> Decentralized Models</h3>
+<div class="outline-text-3" id="text-10-2">
+<ul class="org-ul">
+<li>Permissionless Blockchain</li>
+<li>Permissioned Blockchain</li>
+<li>Consortium Blockchain</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc629b2a" class="outline-3">
+<h3 id="orgc629b2a"><span class="section-number-3">10.3.</span> Network Models</h3>
+<div class="outline-text-3" id="text-10-3">
+<ul class="org-ul">
+<li>Asynchronous</li>
+<li>Synchronous</li>
+<li>Partial Synchronous</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4312fc1" class="outline-3">
+<h3 id="org4312fc1"><span class="section-number-3">10.4.</span> <code>Consensus</code></h3>
+<div class="outline-text-3" id="text-10-4">
+<ul class="org-ul">
+<li>PoW/PoS/DPoS</li>
+<li>Tendermint BFT</li>
+<li>Doomslug</li>
+<li>TowerBFT</li>
+<li>HotStuff</li>
+<li>Narwhall &amp; bullshark</li>
+<li>AptosBFT</li>
+<li>Nominated BFT (GRANDPA &amp; BABE)</li>
+<li>&#x2026;etc</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org77836d8" class="outline-3">
+<h3 id="org77836d8"><span class="section-number-3">10.5.</span> Cryptographic schemes</h3>
+<div class="outline-text-3" id="text-10-5">
+<ul class="org-ul">
+<li>Hashing</li>
+<li>Signature</li>
+<li>Merkle Tree</li>
+<li>Pub/Priv Key</li>
+<li>Zero-Knowledge Proofs</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfe6e89" class="outline-2">
+<h2 id="orgcfe6e89"><span class="section-number-2">11.</span> Decentralized Features</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-org7c2a795" class="outline-3">
+<h3 id="org7c2a795"><span class="section-number-3">11.1.</span> Level of Decentralization</h3>
+<div class="outline-text-3" id="text-11-1">
+<ul class="org-ul">
+<li>Trilemma
+<ul class="org-ul">
+<li>Security</li>
+<li>Decentralized</li>
+<li>Speed</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga71e2ff" class="outline-3">
+<h3 id="orga71e2ff"><span class="section-number-3">11.2.</span> Security</h3>
+<div class="outline-text-3" id="text-11-2">
+<ul class="org-ul">
+<li>Single Failure Tolerance <b>(Consensus)</b></li>
+<li>Availability</li>
+<li>Sybil Attacks</li>
+<li>51% Attacks</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2fa6c43" class="outline-3">
+<h3 id="org2fa6c43"><span class="section-number-3">11.3.</span> Performance</h3>
+<div class="outline-text-3" id="text-11-3">
+<ul class="org-ul">
+<li>Communicate - Broadcast Data</li>
+<li>Argreement among Participants</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdfcc481" class="outline-2">
+<h2 id="orgdfcc481"><span class="section-number-2">12.</span> Example</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org636bd15" class="outline-3">
+<h3 id="org636bd15"><span class="section-number-3">12.1.</span> Install</h3>
+<div class="outline-text-3" id="text-12-1">
+<ul class="org-ul">
+<li><a href="https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/">Install WSL if use Window</a></li>
+<li><a href="https://nodejs.org/en">Install Node.js</a> or <a href="https://github.com/nvm-sh/nvm#installing-and-updating">Node Version Manager</a></li>
+<li><p>
+<a href="https://www.rust-lang.org/tools/install">Install Rust Lang</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">  curl --proto <span style="color: #FFD866;">'=https'</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</pre>
+</div></li>
+<li><p>
+<a href="https://docs.near.org/tools/near-cli">Install near-cli</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">  npm install -g near-cli
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc6c5dd9" class="outline-2">
+<h2 id="orgc6c5dd9"><span class="section-number-2">13.</span> Cons</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>Very Slow</li>
+<li>Expensive</li>
+<li>High Latency</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Dang Quang Vu</p>
+<p class="date">Created: 2023-06-10 Sat 19:00</p>
+</div>
+</body>
+</html>
