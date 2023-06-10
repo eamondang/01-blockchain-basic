@@ -1,0 +1,58 @@
+#+TITLE: Blockchain Basic
+#+AUTHOR: Dang Quang Vu
+#+EMAIL: eamondang@gmail.com
+#+SETUPFILE: ~/theme-readtheorg.setup
+#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
+
+* Program State
+[[./images/program-state.png]]
+* Overview Networks
+[[./images/networks.png]]
++ [[https://www.geeksforgeeks.org/comparison-centralized-decentralized-and-distributed-systems/][Comparison Centralized & Decentralized & Distributed Networks]]
+* DApp Architecture
+[[./images/blockchain-step.png]]
+* Transaction flow
+[[./images/transaction.png]]
+* TODO Byzantine General's Problem
+[[./images/]]
+* Consensus
+[[./images/pow.png]]
+* What is Blockchain?
++ High Availability
++ Sustainability
++ Irreversibility
++ Transparency
++ Append-only
++ =Consensus=
++ Security
++ Global
+
+* Types of Blockchain
++ Permissionless Blockchain - Public Blockchain
+  + Anyone can access to write the data
+  + Anyone can read
+  + Ex: 99%
++ Permissioned Blockchain - Private Blockchain
+  + Participants need permission to accessing the data
+  + Readers need permission to read
+  + Ex: [[https://www.hyperledger.org/use/fabric][Hyperledger Fabric]], [[https://r3.com/][Corda]]
++ Consortium Blockchain
+  + Participants need permission to accessing the data
+  + Anyone can read
+  + Ex: [[https://ripple.com/][Ripple]]
+
+* New generation Blockchain
++ It can be thought of as =ONE BIG COMPUTER= made up of small computers around the world.
++ All these computers (nodes) are connected to one another and have a full copy of the code and data.
++ One of the best ways to understand Ethereum is by comparing it with a =traditional client/server architecture=
+
+* Decentralized Features
+** Level of Decentralization
+** Security
++ Single Failure Tolerance *(Consensus)*
++ Availability
++ Sybil Attacks
++ 51% Attacks
+** Performance
++ Communicate - Broadcast Data
++ Argreement among Participants
