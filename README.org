@@ -9,13 +9,26 @@
 - [[#overview-networks][Overview Networks]]
 - [[#dapp-architecture][DApp Architecture]]
 - [[#byzantine-generals-problem][Byzantine General's Problem]]
+  - [[#image-01][Image 01]]
+  - [[#image-02][Image 02]]
+  - [[#practical-byzantine-fault-tolerance][Practical Byzantine Fault Tolerance]]
 - [[#transaction-flow][Transaction flow]]
 - [[#consensus][Consensus]]
+  - [[#proof-of-work][Proof of Work]]
+  - [[#proof-of-stake][Proof of Stake]]
 - [[#requirements-of-blockchain][Requirements of Blockchain?]]
 - [[#types-of-blockchain][Types of Blockchain]]
 - [[#what-is-blockchain][What is Blockchain]]
 - [[#components-of-blockchain][Components of Blockchain]]
+  - [[#data-models][Data Models]]
+  - [[#decentralized-models][Decentralized Models]]
+  - [[#network-models][Network Models]]
+  - [[#consensus-1][=Consensus=]]
+  - [[#cryptographic-schemes][Cryptographic schemes]]
 - [[#decentralized-features][Decentralized Features]]
+  - [[#level-of-decentralization][Level of Decentralization]]
+  - [[#security][Security]]
+  - [[#performance][Performance]]
 - [[#example][Example]]
   - [[#install][Install]]
 - [[#cons][Cons]]
@@ -28,19 +41,19 @@
 * DApp Architecture
 [[./images/blockchain-step.png]]
 * [[https://www.youtube.com/watch?v=dfsRQyYXOsQ][Byzantine General's Problem]]
-+ Image 01
-  [[./images/bft-0.png]]
-+ Image 02
-  [[./images/bft-1.png]]
-+ Practical Byzantine Fault Tolerance
-  [[./images/pbft-1.png]]
+** Image 01
+[[./images/bft-0.png]]
+** Image 02
+[[./images/bft-1.png]]
+** Practical Byzantine Fault Tolerance
+[[./images/pbft-1.png]]
 * Transaction flow
 [[./images/transaction.png]]
 * [[https://www.youtube.com/watch?v=3AJ3lcm15cY][Consensus]]
-+ Proof of Work
- [[./images/pow.png]]
-+ Proof of Stake
-  [[./images/pos.png]]
+** Proof of Work
+[[./images/pow.png]]
+** Proof of Stake
+[[./images/pos.png]]
 
 * Requirements of Blockchain?
 + High Availability
@@ -72,48 +85,49 @@
 + One of the best ways to understand blockchain is by comparing it with a =traditional client/server architecture=
 
 * Components of Blockchain
-+ Data Models
-  - State Models
-  - Account Models
-  - Object Models
-+ Decentralized Models
-  - Permissionless Blockchain
-  - Permissioned Blockchain
-  - Consortium Blockchain
-+ Network Models
-  - Asynchronous
-  - Synchronous
-  - Partial Synchronous
-+ =Consensus=
-  - PoW/PoS/DPoS
-  - Tendermint BFT
-  - Doomslug
-  - TowerBFT
-  - HotStuff
-  - Narwhall & bullshark
-  - AptosBFT
-  - Nominated BFT (GRANDPA & BABE)
-  - ...etc
-+ Cryptographic schemes
-  - Hashing
-  - Signature
-  - Merkle Tree
-  - Pub/Priv Key
-  - Zero-Knowledge Proofs
+** Data Models
++ State Models
++ Account Models
++ Object Models
+** Decentralized Models
++ Permissionless Blockchain
++ Permissioned Blockchain
++ Consortium Blockchain
+** Network Models
++ Asynchronous
++ Synchronous
++ Partial Synchronous
+** =Consensus=
++ PoW/PoS/DPoS
++ Tendermint BFT
++ Doomslug
++ TowerBFT
++ HotStuff
++ Narwhall & bullshark
++ AptosBFT
++ Nominated BFT (GRANDPA & BABE)
++ ...etc
+** Cryptographic schemes
++ Hashing
++ Signature
++ Merkle Tree
++ Pub/Priv Key
++ Zero-Knowledge Proofs
 * Decentralized Features
-+ Level of Decentralization
-  + Trilemma
-    + Security
-    + Decentralized
-    + Speed
-+ Security
-  + Single Failure Tolerance *(Consensus)*
-  + Availability
-  + Sybil Attacks
-  + 51% Attacks
-+ Performance
-  + Communicate - Broadcast Data
-  + Argreement among Participants
+** Level of Decentralization
++ Trilemma
+  + Security
+  + Decentralized
+  + Speed
+** Security
++ Single Failure Tolerance *(Consensus)*
++ Availability
++ Sybil Attacks
++ 51% Attacks
+** Performance
++ Communicate - Broadcast Data
++ Argreement among Participants
+
 * Example
 ** Install
 + [[https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/][Install WSL if use Window]]
