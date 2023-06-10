@@ -4,6 +4,26 @@
 #+SETUPFILE: ~/theme-readtheorg.setup
 #+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
 
+* Table of Contents :toc:
+- [[#program-state][Program State]]
+- [[#overview-networks][Overview Networks]]
+- [[#dapp-architecture][DApp Architecture]]
+- [[#byzantine-generals-problem][Byzantine General's Problem]]
+  - [[#image-01][Image 01]]
+  - [[#image-02][Image 02]]
+  - [[#practical-byzantine-fault-tolerance][Practical Byzantine Fault Tolerance]]
+- [[#transaction-flow][Transaction flow]]
+- [[#consensus][Consensus]]
+  - [[#proof-of-work][Proof of Work]]
+  - [[#proof-of-stake][Proof of Stake]]
+- [[#components-or-requirements-of-blockchain][Components or Requirements of Blockchain?]]
+- [[#types-of-blockchain][Types of Blockchain]]
+- [[#what-is-blockchain][What is Blockchain]]
+- [[#decentralized-features][Decentralized Features]]
+  - [[#level-of-decentralization][Level of Decentralization]]
+  - [[#security][Security]]
+  - [[#performance][Performance]]
+
 * Program State
 [[./images/program-state.png]]
 * Overview Networks
@@ -11,13 +31,22 @@
 + [[https://www.geeksforgeeks.org/comparison-centralized-decentralized-and-distributed-systems/][Comparison Centralized & Decentralized & Distributed Networks]]
 * DApp Architecture
 [[./images/blockchain-step.png]]
+* [[https://www.youtube.com/watch?v=dfsRQyYXOsQ][Byzantine General's Problem]]
+** Image 01
+[[./images/bft-0.png]]
+** Image 02
+[[./images/bft-1.png]]
+** Practical Byzantine Fault Tolerance
+[[./images/pbft-1.png]]
 * Transaction flow
 [[./images/transaction.png]]
-* TODO Byzantine General's Problem
-[[./images/]]
-* Consensus
+* [[https://www.youtube.com/watch?v=3AJ3lcm15cY][Consensus]]
+** Proof of Work
 [[./images/pow.png]]
-* What is Blockchain?
+** Proof of Stake
+[[./images/pos.png]]
+
+* Components or Requirements of Blockchain?
 + High Availability
 + Sustainability
 + Irreversibility
@@ -41,13 +70,17 @@
   + Anyone can read
   + Ex: [[https://ripple.com/][Ripple]]
 
-* New generation Blockchain
+* What is Blockchain
 + It can be thought of as =ONE BIG COMPUTER= made up of small computers around the world.
 + All these computers (nodes) are connected to one another and have a full copy of the code and data.
 + One of the best ways to understand Ethereum is by comparing it with a =traditional client/server architecture=
 
 * Decentralized Features
 ** Level of Decentralization
++ Trilemma
+  + Security
+  + Decentralized
+  + Speed
 ** Security
 + Single Failure Tolerance *(Consensus)*
 + Availability
