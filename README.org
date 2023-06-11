@@ -32,6 +32,7 @@
 - [[#example][Example]]
   - [[#install][Install]]
 - [[#cons][Cons]]
+- [[#scaling][Scaling]]
 
 * Program State
 [[./images/program-state.png]]
@@ -145,3 +146,7 @@
 + Very Slow
 + Expensive
 + High Latency
++ Limited Scalable
+
+* Scaling
+[[./images/node.png]]
